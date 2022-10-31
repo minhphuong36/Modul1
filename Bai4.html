@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="mycanvas" width="1200px" height="1000px" style="border: 1px solid #d3d3d3;"></canvas>
+<script>
+     class Rectangle{
+        x;
+        y;
+        width;
+        height;
+        color;
+
+         constructor(x, y, width, height, color) {
+             this.x = x;
+             this.y = y;
+             this.width = width;
+             this.height = height;
+             this.color = color;
+         }
+         reder(canvas){
+             let context = canvas.getContext('2d');
+             context.fillStyle=this.color;
+             context.fillRect(this.x,this.y,this.width,this.height);
+
+         }
+     }
+    let canvas = document.getElementById('mycanvas');
+    let hinh1 = new Rectangle(100,100,500,400,"#555");
+    let hinh2 = new Rectangle(400,400,400,300,"red");
+    hinh1.reder(canvas);
+    hinh2.reder(canvas);
+</script>
+</body>
+</html>

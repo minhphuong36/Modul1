@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [11,2,33,56,70,23,33,1,0,-34];
+    let index = +prompt("Nhập vị trí index:");
+    let x = +prompt("Nhập số nguyên:");
+    let b = new Array(a.length +1)
+
+    function insertNumberToArray(a,index,x) {
+        if (index < 0 || index > a.length) {
+            return b = a;
+        }
+        for (let i = 0; i < b.length; i++) {
+            if(i < index){
+                b[i] = a[i];
+            }else if(i==index){
+                b[index] = x;
+            }else {
+                b[i] = a[i-1];
+            }
+        }
+
+        return b;
+    }
+    document.write(insertNumberToArray(a,index,x));
+</script>
+</body>
+</html>
